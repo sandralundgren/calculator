@@ -1,0 +1,9 @@
+# Created by https://www.gitignore.io
+
+### CodeKit ###
+# General CodeKit files to ignore
+config.codekit
+/min
+# Ignore docs files
+styles/.sass-cache
+styles/.sass-cache/*
