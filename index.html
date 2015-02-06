@@ -4,38 +4,43 @@
 	<meta charset="UTF-8">
 	<title>JS Calculator</title>
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+	<script src="js/jquery.min.js"></script>
 </head>
 <body>
 
-<div class="wrapper">
+	<div id="calculator">
 
-	<input id="theInput" type="number" /><br>
+		<input id="theInput" type="number" /><br>
 
-	<button class="other">AC</button>
-	<button class="other">+/-</button>
-	<button class="other">%</button>
-	<button class="operators">÷</button><br>
+		<button class="other">AC</button>
+		<button class="other">+/-</button>
+		<button class="other">%</button>
+		<button class="operators">÷</button><br>
 
-	<button class="digits">7</button>
-	<button class="digits">8</button>
-	<button class="digits">9</button>
-	<button class="operators">x</button><br>
+		<button class="digits">7</button>
+		<button class="digits">8</button>
+		<button class="digits">9</button>
+		<button class="operators">x</button><br>
 
-	<button class="digits">4</button>
-	<button class="digits">5</button>
-	<button class="digits">6</button>
-	<button class="operators">-</button><br>
+		<button class="digits">4</button>
+		<button class="digits">5</button>
+		<button class="digits">6</button>
+		<button class="operators">-</button><br>
 
-	<button class="digits">1</button>
-	<button class="digits">2</button>
-	<button class="digits">3</button>
-	<button class="operators">+</button><br>
+		<button class="digits">1</button>
+		<button class="digits">2</button>
+		<button class="digits">3</button>
+		<button class="operators">+</button><br>
 
-	<button class="digits">0</button>
-	<button class="digits">,</button>
-	<button class="operators">=</button>
+		<button class="digits" id="theZero">0</button>
+		<button class="digits">,</button>
+		<button class="operators">=</button>
 
-</div>	
+	</div><!-- calculator -->	
+
 	
 </body>
+<script src="js/calculatorcopy.js"></script>
+
 </html>

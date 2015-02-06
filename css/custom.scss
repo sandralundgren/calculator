@@ -1,14 +1,14 @@
 @import 'reset';
 
-// General
+// Variables
 
-/* Font styling */
+// Font styling 
 
 $fontSize: 20px;
 $fontColor: white;
 $fontFamily: Helvetica, sans-serif;
 
-/* Input styling */
+// Input styling 
 
 $inputWidth: 220px;
 $inputHeight: 50px;
@@ -16,12 +16,26 @@ $paddingLeft: 10px;
 $inputFontSize: 30px;
 $inputColor: #ffa2a2;
 
-/* Buttons styling */
+// Calculator
+
+$calcWidth: 17%;
+$calcBorderRadius: 4px;
+$calcPadding: 40px 38px 40px 38px;
+$marginTop: 10%;
+$marginLeft: 38%;
+
+// Buttons styling 
 
 $buttonWidth: 52px;
 $buttonHeight: 35px;
 
+$theZeroWidth: 113px;
+$zeroPaddingRight: 65px;
+
 // Colors
+
+$backgroundColor: linear-gradient(135deg, #69b5b9 0%, #daf0ca 100%);
+$calculatorColor: #FFFAFA;
 
 $buttonColor: #91dfcf;
 $hoverButtonColor: #64c4b1;
@@ -34,6 +48,8 @@ $buttonsPadding: 5px;
 $margin: 6px;
 $borderRadius: 3px;
 $boxShadow: 0px 4px rgba(0, 0, 0, 0.3); 
+
+
 
 /* Mixins */
 
@@ -51,10 +67,27 @@ $boxShadow: 0px 4px rgba(0, 0, 0, 0.3);
 		color: $fontColor;
 }
 
+@mixin calculatorStyling () {
+
+		background: $calculatorColor;
+		box-shadow: $boxShadow;
+		border-radius: $calcBorderRadius;
+		width: $calcWidth;
+		padding: $calcPadding;		
+		margin-top: $marginTop;
+		margin-left: $marginLeft;
+}
+
 
 body {
 	 	font-family: $fontFamily;
+	 	background: $backgroundColor; 	
+	 	height: 100vh;	 	
+}
 
+div#calculator {
+		@include calculatorStyling();
+				
 }
 
 #theInput {
@@ -64,6 +97,9 @@ body {
 		padding-left: $paddingLeft;
 		font-size: $inputFontSize;
 		color: $fontColor;
+		border: inset 4px;
+		outline: none;
+		margin-bottom: 15px;
 }
 
 button {
@@ -75,7 +111,13 @@ button.digits {
 		@extend button;
 		background-color: $buttonColor;
 
+			&#theZero { width: $theZeroWidth; 
+						padding-right: $zeroPaddingRight;
+						}
+
 			&:hover { background-color: $hoverButtonColor; } // the & is very important here
+
+				
 
 } //.digits	
 
