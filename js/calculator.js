@@ -23,26 +23,25 @@ function stripCommas(theDigits) {
         var n = parseFloat(theDigits.join('')); 
 
 	    displayEl.value = n;
-
+	    
 	}    
-
 }
 
 var clearPressed = function() {
 
-	displayEl.value = 0;
+    displayEl.value = 0;
 
 }; 
 
 var digitPressed = function() {
 
-	result = 0;
+    result = 0;
 
     var text = $(this).text(); 
 
     theDigits.push(text); 
 
-	stripCommas(theDigits);
+    stripCommas(theDigits);
 
 };
 
@@ -56,7 +55,7 @@ var getExpression = function() {
 
         numberOperatorNumber.push(n); 
 
-	    displayEl.value = n;
+	displayEl.value = n;
 
         theDigits = []; 
 
@@ -73,26 +72,25 @@ var operatorPressed = function() {
 
 };
 
-
 var equalPressed = function() { 
 
 	getExpression();
 		
 	if (numberOperatorNumber[1] === "+") {
 
-		result = addition(numberOperatorNumber[0], numberOperatorNumber[2]);	
+	   result = addition(numberOperatorNumber[0], numberOperatorNumber[2]);	
 
 	} else if (numberOperatorNumber[1] === "-") {
 
-		result = subtraction(numberOperatorNumber[0], numberOperatorNumber[2]);	
+	   result = subtraction(numberOperatorNumber[0], numberOperatorNumber[2]);	
 
 	} else if (numberOperatorNumber[1] === "x") {
 								
-		result = multiplication(numberOperatorNumber[0], numberOperatorNumber[2]);	
+	   result = multiplication(numberOperatorNumber[0], numberOperatorNumber[2]);	
 
 	} else if (numberOperatorNumber[1] === "÷") {
 
-		result = division(numberOperatorNumber[0], numberOperatorNumber[2]);		
+	   result = division(numberOperatorNumber[0], numberOperatorNumber[2]);		
 	
 	}
 
