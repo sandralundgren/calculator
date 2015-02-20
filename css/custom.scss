@@ -19,7 +19,7 @@ $inputColor: #ffa2a2;
 // Calculator
 
 $calcWidth: 17%;
-$calcBorderRadius: 4px;
+$calcBorderRadius: 14px;
 $calcPadding: 40px 38px 40px 38px;
 $marginTop: 10%;
 $marginLeft: 38%;
@@ -82,7 +82,8 @@ $boxShadow: 0px 4px rgba(0, 0, 0, 0.3);
 body {
 	 	font-family: $fontFamily;
 	 	background: $backgroundColor; 	
-	 	height: 100vh;	 	
+	 	height: 100vh;
+	 	box-sizing: border-box;	 	
 }
 
 div#calculator {
@@ -124,7 +125,7 @@ button.digits {
 button.operators {
 
 		@extend button;
-		background-color: $operatorsColor;
+		background-color: $operatorsColor;				
 
 			&:hover { background-color: $hoverOperatorsColor; } 		
 
