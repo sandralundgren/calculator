@@ -76,30 +76,31 @@ var operatorPressed = function() {
 
 var equalPressed = function() { 
 
-								getExpression();
+	getExpression();
 		
-								if (numberOperatorNumber[1] === "+") {
+	if (numberOperatorNumber[1] === "+") {
 
-									result = addition(numberOperatorNumber[0], numberOperatorNumber[2]);	
+		result = addition(numberOperatorNumber[0], numberOperatorNumber[2]);	
 
-								} else if (numberOperatorNumber[1] === "-") {
+	} else if (numberOperatorNumber[1] === "-") {
 
-									result = subtraction(numberOperatorNumber[0], numberOperatorNumber[2]);	
+		result = subtraction(numberOperatorNumber[0], numberOperatorNumber[2]);	
 
-								} else if (numberOperatorNumber[1] === "x") {
+	} else if (numberOperatorNumber[1] === "x") {
 								
-									result = multiplication(numberOperatorNumber[0], numberOperatorNumber[2]);	
+		result = multiplication(numberOperatorNumber[0], numberOperatorNumber[2]);	
 
-								} else if (numberOperatorNumber[1] === "÷") {
+	} else if (numberOperatorNumber[1] === "÷") {
 
-									result = division(numberOperatorNumber[0], numberOperatorNumber[2]);		
-								}
+		result = division(numberOperatorNumber[0], numberOperatorNumber[2]);		
+	
+	}
 
-							    displayEl.value = result;	
+	displayEl.value = result;	
 
-							    numberOperatorNumber = []; 					    
+	numberOperatorNumber = []; 					    
 
-							};  
+};  
 
 
 // Button listeners
